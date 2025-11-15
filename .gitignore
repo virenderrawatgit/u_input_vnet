@@ -24,3 +24,5 @@ crash.*.log
 # Ignore sensitive files
 *.env
 secrets.tfvars
+
+virender

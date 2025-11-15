@@ -13,3 +13,7 @@ variable "address_space_base" {
   type        = string
   default     = "10"
 }
+
+variable "virender" {
+  
+}
