@@ -1,0 +1,26 @@
+# Ignore all .exe files
+*.exe
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform crash logs
+crash.log
+crash.*.log
+
+# Ignore Terraform local files
+.terraform/
+.terraform.lock.hcl
+
+# Ignore VS Code workspace settings
+.vscode/
+
+# Ignore ZIPs or compiled binaries
+*.zip
+*.bin
+*.dll
+
+# Ignore sensitive files
+*.env
+secrets.tfvars
