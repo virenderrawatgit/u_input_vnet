@@ -5,7 +5,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "Trg01" {
-  name     = "rghcinode01"
+  name     = var.RGname
   location = "eastus"
 }
 
@@ -24,8 +24,9 @@ resource "azurerm_virtual_network" "tvnet01" {
   for_each            = local.vnets
   name                = each.value.name
   location            = "eastus"
-  resource_group_name = "rghcinode01"
+  resource_group_name = var.RGname
   address_space       = each.value.address_space
+  depends_on = [ azurerm_resource_group.Trg01 ]
 }
 
 output "vnet_names" {
